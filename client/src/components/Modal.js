@@ -24,8 +24,8 @@ const Modal = ({ setModalOpen, contract, account, privateKey }) => {
         url: "https://api.pinata.cloud/pinning/pinFileToIPFS",
         data: formData,
         headers: {
-          pinata_api_key: `db703bda86dc58a581b4`, // Pinata API Key
-          pinata_secret_api_key: `00034e0ab5318fa48e5d01eaf698b3319aa4ea49046d20cd76b5b77b51358b1c`, // Pinata Secret API Key
+          pinata_api_key: `Enter_Your_Key`, // Pinata API Key
+          pinata_secret_api_key: `Enter_Your_Secret_Key`, // Pinata Secret API Key
           "Content-Type": "multipart/form-data",
         },
       });
