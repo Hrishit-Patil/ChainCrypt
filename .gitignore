@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+client/node_modules/
+
+# Build and compiled files
+cache/
+artifacts/
+src/artifacts/
+build/
+
+# Logs
+*.log
+
+# Environment variables
+.env
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE and editor files
+.idea/
+*.sublime-workspace
+*.swp
+
+# Hardhat specific
+coverage/
+coverage.json

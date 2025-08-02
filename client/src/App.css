@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  font-family: 'Orbitron', sans-serif;
+  color: #e2e8f0;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Particle Overlay with Red, Green, Light Blue, Yellow Dots */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><circle cx="10" cy="10" r="1" fill="rgba(255, 0, 0, 0.9)" /><circle cx="40" cy="40" r="1" fill="rgba(0, 255, 0, 0.9)" /><circle cx="70" cy="70" r="1" fill="rgba(56, 189, 248, 0.9)" /><circle cx="100" cy="100" r="1" fill="rgba(255, 255, 0, 0.9)" /></svg>');
+  background-size: 150px 150px;
+  animation: particleShift 20s infinite linear; /* Increased speed */
+  opacity: 0.4; /* Bright but subtle */
+}
+
+@keyframes particleShift {
+  0% { background-position: 0 0; }
+  100% { background-position: 150px 150px; }
+}
+
+.App {
+  text-align: center;
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 4.5rem; /* Increased size */
+  font-weight: 800;
+  background: linear-gradient(90deg, #8b5cf6, #ec4899, #22d3ee);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+  margin-bottom: 60px; /* Increased spacing */
+  letter-spacing: 2px;
+}
+
+h1 span.subtitle {
+  display: block;
+  font-size: 1.2rem; /* Increased size */
+  font-weight: 400;
+  color: #94a3b8;
+  text-shadow: 0 0 5px rgba(148, 163, 184, 0.2);
+}
+
+p {
+  font-size: 1.3rem;
+  color: #94a3b8;
+  margin-bottom: 40px;
+  text-shadow: 0 0 5px rgba(148, 163, 184, 0.2);
+}
+
+.share {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #8b5cf6, #ec4899);
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+  transition: all 0.3s ease;
+}
+
+.share:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(139, 92, 246, 0.6);
+  background: linear-gradient(135deg, #a78bfa, #f472b6);
+}
